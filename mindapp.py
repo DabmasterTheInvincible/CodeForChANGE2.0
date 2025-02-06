@@ -1,3 +1,4 @@
+from app import app
 import streamlit as st
 from supabase import create_client, Client
 
@@ -100,7 +101,7 @@ def login_page():
                         if response.user:
                             st.session_state.user = response.user
                             show_message("Login Successful!", "success")
-                            st.rerun()
+                            app()
                         else:
                             show_message("Invalid Credentials!", "error")
                     except Exception as e:
