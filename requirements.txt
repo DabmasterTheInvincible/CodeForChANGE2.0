@@ -1,0 +1,17 @@
+streamlit
+pandas
+datetime
+uuid
+time
+requests
+seaborn
+supabase
+matplotlib
+streamlit_calendar
+pickle
+json
+random
+nltk
+keras
+numpy
+tensorflow
