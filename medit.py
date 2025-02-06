@@ -13,13 +13,13 @@ if option == "Meditation":
 
     # Fixed Heart Animation
     heart_animation = """
-            <style>
+                        <style>
             @keyframes breathe {
-                0% { transform: scale(1); opacity: 0.8; }
-                25% { transform: scale(1.2); opacity: 1; }
-                50% { transform: scale(1.4); opacity: 1.2; }
-                75% { transform: scale(1.2); opacity: 1; }
-                100% { transform: scale(1); opacity: 0.8; }
+                0% { transform: scale(1) rotate(-45deg); opacity: 0.8; }
+                25% { transform: scale(1.2) rotate(-45deg); opacity: 1; }
+                50% { transform: scale(1.4) rotate(-45deg); opacity: 1.2; }
+                75% { transform: scale(1.2) rotate(-45deg); opacity: 1; }
+                100% { transform: scale(1) rotate(-45deg); opacity: 0.8; }
             }
 
             .heart-container {
@@ -37,11 +37,10 @@ if option == "Meditation":
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%); /* Removed rotate(-45deg) */
+                transform: translate(-50%, -50%) rotate(-45deg);
                 animation: breathe 6s infinite ease-in-out;
                 box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-}
-
+            }
 
             .heart:before, .heart:after {
                 content: "";
@@ -63,6 +62,8 @@ if option == "Meditation":
             }
 
             </style>
+
+
     """
 
     st.markdown(heart_animation, unsafe_allow_html=True)
